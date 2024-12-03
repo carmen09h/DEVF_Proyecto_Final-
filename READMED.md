@@ -7,7 +7,7 @@ Este proyecto es una página web que presenta información sobre algunos temas c
 - Imágenes representativas de cada tema.
 
 ## Autor 
-@CarmeHuitron
+@CarmenHuitrón
 
 ## Cómo visualizar el proyecto
 El proyecto está alojado en GitHub Pages y se puede acceder a través de este enlace:
