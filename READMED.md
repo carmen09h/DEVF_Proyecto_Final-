@@ -12,7 +12,7 @@ Este proyecto es una página web que presenta información sobre algunos temas c
 ## Cómo visualizar el proyecto
 El proyecto está alojado en GitHub Pages y se puede acceder a través de este enlace:
 
-[Ver la página en GitHub Pages](https://tuusuario.github.io/proyecto_tecnologia)
+[Ver la página en GitHub Pages](https://carmen09h.github.io/DEVF_Proyecto_Final-/#iot)
 
 ## Repositorio en GitHub
 El código fuente está disponible en el siguiente repositorio:
