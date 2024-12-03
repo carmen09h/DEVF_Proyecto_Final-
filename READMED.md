@@ -6,6 +6,9 @@ Este proyecto es una página web que presenta información sobre algunos temas c
 - Estructura ca con HTML.
 - Imágenes representativas de cada tema.
 
+## Autor 
+@CarmeHuitron
+
 ## Cómo visualizar el proyecto
 El proyecto está alojado en GitHub Pages y se puede acceder a través de este enlace:
 
