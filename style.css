@@ -9,7 +9,7 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background-color: #0073e6;
+    background-color: #eb7db8;
     color: white;
 }
 
@@ -52,4 +52,26 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+.imagen-animada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.imagen-animada img {
+    width: 300px;
+    height: auto;
+    animation: mover 3s infinite alternate;
+}
+
+/* Animación de movimiento */
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
 }
