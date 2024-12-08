@@ -29,20 +29,20 @@ p {
 
 /* Estilos para el menú de navegación */
 nav ul {
+    display: flex; /* Aplicamos Flexbox */
+    justify-content: center; /* Alinea los elementos de manera horizontal */
     list-style-type: none;
     padding: 0;
-    text-align: center;
-    background-color: #333; /* No hereda el fondo del body, se define específicamente */
+    background-color: #333;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white; /* Este color se sobrepone a la herencia */
+    color: white;
     font-size: 1.2em;
 }
 
@@ -54,7 +54,7 @@ nav ul li a:hover {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #0073e6;
+    background-color: #eb93ed;
     color: white;
     position: absolute;
     bottom: 0;
@@ -64,8 +64,8 @@ footer {
 /* Estilo para la imagen con animación */
 .imagen-animada {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centra la imagen de manera horizontal */
+    align-items: center; /* Centra la imagen de manera vertical */
     margin-top: 50px;
 }
 
@@ -84,4 +84,27 @@ footer {
     100% {
         transform: translateY(-30px);
     }
+}
+
+/* Estilos generales para las subpáginas */
+main {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en una columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    text-align: center;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
 }
