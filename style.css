@@ -1,40 +1,32 @@
-/* Propiedades generales para toda la página */
 body {
-    font-family: Arial, sans-serif; /* Estilo heredado por todos los elementos del cuerpo */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333; /* Color heredado por todos los elementos */
-    box-sizing: border-box;
+    color: #333;
 }
 
-/* Los estilos para los encabezados también se heredan por los elementos dentro de header */
 header {
     text-align: center;
     padding: 20px;
     background-color: #ed93c3;
-    color: rgb(22, 22, 22); /* Este color será heredado por h1 y p dentro de header */
+    color: rgb(22, 22, 22);
 }
 
 h1 {
     margin: 0;
-    font-size: 2.5em; /* Tamaño heredado de la fuente de body */
-    color: inherit; /* hereda el color del contenedor */
+    font-size: 2.5em;
 }
 
-/* Los párrafos dentro del body heredarán la propiedad de color */
 p {
     margin: 10px 0;
-    color: inherit; /* Heredando el color de texto */
 }
 
-/* Estilos para la navegación */
 nav ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
     background-color: #333;
-    font-family: inherit; /* Hereda la fuente de body */
 }
 
 nav ul li {
@@ -52,17 +44,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Estilos para los enlaces, heredados desde p */
-footer p {
-    font-size: 1em;
-    color: inherit; /* Heredando el color de texto */
-}
-
-footer a {
-    text-decoration: none;
-    color: inherit; /* Heredando el color de texto */
-}
-
 footer {
     text-align: center;
     padding: 10px;
@@ -73,12 +54,25 @@ footer {
     width: 100%;
 }
 
-/* Efectos para imágenes en las subpáginas */
-.imagen-efecto {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.imagen-animada img {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+    animation: moverImagen 10s infinite alternate;
 }
 
-.imagen-efecto:hover {
-    transform: scale(1.1); /* Aumenta el tamaño de la imagen */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega sombra al pasar el ratón */
+@keyframes moverImagen {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(20px); }
+}
+
+.imagen-centro {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.imagen-centro img {
+    width: 100%;
+    max-width: 400px;
 }
