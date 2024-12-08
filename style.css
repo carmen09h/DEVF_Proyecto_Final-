@@ -47,9 +47,33 @@ nav ul li a:hover {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #e9b6e3;
-    color: rgb(0, 0, 0);
+    background-color: #0073e6;
+    color: white;
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+.imagen-animada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Espacio superior aumentado */
+}
+
+.imagen-animada img {
+    width: 500px; /* Tamaño más grande */
+    height: auto;
+    max-width: 90%; /* Responsivo */
+    animation: mover 3s infinite alternate; /* Animación */
+}
+
+/* Animación de movimiento */
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-30px); /* Desplazamiento vertical más grande */
+    }
 }
