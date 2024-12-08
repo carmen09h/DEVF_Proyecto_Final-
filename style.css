@@ -1,32 +1,39 @@
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; 
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
+    color: #333; 
+    box-sizing: border-box;
 }
+
 
 header {
     text-align: center;
     padding: 20px;
     background-color: #ed93c3;
-    color: rgb(22, 22, 22);
+    color: rgb(22, 22, 22); /* Este color será heredado por h1 y p dentro de header */
 }
 
 h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2.5em; /* Tamaño heredado de la fuente de body */
+    color: inherit; /* hereda el color del contenedor */
 }
 
 p {
     margin: 10px 0;
+    color: inherit; /* Heredando el color de texto */
 }
 
+/* Estilos para la navegación */
 nav ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
     background-color: #333;
+    font-family: inherit; /* Hereda la fuente de body */
 }
 
 nav ul li {
@@ -44,6 +51,17 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Estilos para los enlaces, heredados desde p */
+footer p {
+    font-size: 1em;
+    color: inherit; 
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit; /
+}
+
 footer {
     text-align: center;
     padding: 10px;
@@ -54,26 +72,12 @@ footer {
     width: 100%;
 }
 
-.imagen-animada {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px; /* Espacio superior aumentado */
+/* Efectos para imágenes */
+.imagen-efecto {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.imagen-animada img {
-    width: 500px; /* Tamaño más grande */
-    height: auto;
-    max-width: 90%; /* Responsivo */
-    animation: mover 3s infinite alternate; /* Animación */
-}
-
-/* Animación de movimiento */
-@keyframes mover {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-30px); /* Desplazamiento vertical más grande */
-    }
+.imagen-efecto:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /
 }
