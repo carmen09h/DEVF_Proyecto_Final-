@@ -1,14 +1,14 @@
-
+/* Propiedades generales para toda la página */
 body {
-    font-family: Arial, sans-serif; 
+    font-family: Arial, sans-serif; /* Estilo heredado por todos los elementos del cuerpo */
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333; 
+    color: #333; /* Color heredado por todos los elementos */
     box-sizing: border-box;
 }
 
-
+/* Los estilos para los encabezados también se heredan por los elementos dentro de header */
 header {
     text-align: center;
     padding: 20px;
@@ -22,6 +22,7 @@ h1 {
     color: inherit; /* hereda el color del contenedor */
 }
 
+/* Los párrafos dentro del body heredarán la propiedad de color */
 p {
     margin: 10px 0;
     color: inherit; /* Heredando el color de texto */
@@ -54,12 +55,12 @@ nav ul li a:hover {
 /* Estilos para los enlaces, heredados desde p */
 footer p {
     font-size: 1em;
-    color: inherit; 
+    color: inherit; /* Heredando el color de texto */
 }
 
 footer a {
     text-decoration: none;
-    color: inherit; /
+    color: inherit; /* Heredando el color de texto */
 }
 
 footer {
@@ -72,12 +73,12 @@ footer {
     width: 100%;
 }
 
-/* Efectos para imágenes */
+/* Efectos para imágenes en las subpáginas */
 .imagen-efecto {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .imagen-efecto:hover {
-    transform: scale(1.1); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega sombra al pasar el ratón */
 }
