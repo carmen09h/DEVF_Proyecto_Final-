@@ -9,7 +9,10 @@ body {
 
 /* Estilos para el header */
 header {
-    text-align: center;
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    flex-direction: column; /* Colocamos los elementos en columna */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
     padding: 20px;
     background-color: #ed93c3;
     color: rgb(22, 22, 22); /* Este color anula la herencia del color de body */
@@ -19,21 +22,24 @@ header {
 h1 {
     margin: 0;
     font-size: 2.5em;
+    text-align: center; /* Alinea el título al centro */
 }
 
 /* Estilo para párrafos */
 p {
     margin: 10px 0;
     font-size: 1.1em; /* Hereda color y fuente de body */
+    text-align: center; /* Alinea el párrafo al centro */
 }
 
 /* Estilos para el menú de navegación */
 nav ul {
-    display: flex; /* Aplicamos Flexbox */
-    justify-content: center; /* Alinea los elementos de manera horizontal */
+    display: flex; /* Usamos flexbox para la alineación de los ítems */
     list-style-type: none;
     padding: 0;
-    background-color: #333;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    text-align: center;
+    background-color: #333; /* No hereda el fondo del body, se define específicamente */
 }
 
 nav ul li {
@@ -42,7 +48,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: white; /* Este color se sobrepone a la herencia */
     font-size: 1.2em;
 }
 
@@ -52,6 +58,9 @@ nav ul li a:hover {
 
 /* Estilos para el footer */
 footer {
+    display: flex; /* Usamos flexbox para alinear el texto */
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Centra el texto verticalmente */
     text-align: center;
     padding: 10px;
     background-color: #eb93ed;
@@ -64,8 +73,8 @@ footer {
 /* Estilo para la imagen con animación */
 .imagen-animada {
     display: flex;
-    justify-content: center; /* Centra la imagen de manera horizontal */
-    align-items: center; /* Centra la imagen de manera vertical */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
     margin-top: 50px;
 }
 
@@ -84,27 +93,4 @@ footer {
     100% {
         transform: translateY(-30px);
     }
-}
-
-/* Estilos generales para las subpáginas */
-main {
-    display: flex;
-    flex-direction: column; /* Organiza el contenido en una columna */
-    align-items: center; /* Centra el contenido horizontalmente */
-    justify-content: center; /* Centra el contenido verticalmente */
-    text-align: center;
-    margin: 20px;
-}
-
-h2 {
-    font-size: 2em;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 10px 0;
 }
