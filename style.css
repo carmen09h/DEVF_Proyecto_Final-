@@ -53,26 +53,3 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
-.imagen-animada img {
-    width: 100%;
-    max-width: 800px;
-    display: block;
-    margin: 0 auto;
-    animation: moverImagen 10s infinite alternate;
-}
-
-@keyframes moverImagen {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(20px); }
-}
-
-.imagen-centro {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.imagen-centro img {
-    width: 100%;
-    max-width: 400px;
-}
