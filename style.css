@@ -58,14 +58,14 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px; /* Espacio superior aumentado */
+    margin-top: 50px; /* Mayor espacio superior */
 }
 
 .imagen-animada img {
-    width: 500px; /* Tamaño más grande */
+    width: 500px; /* Aumenta el ancho */
     height: auto;
-    max-width: 90%; /* Responsivo */
-    animation: mover 3s infinite alternate; /* Animación */
+    max-width: 90%; /* Asegura que no se desborde en pantallas pequeñas */
+    animation: mover 3s infinite alternate;
 }
 
 /* Animación de movimiento */
@@ -74,6 +74,6 @@ footer {
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-30px); /* Desplazamiento vertical más grande */
+        transform: translateY(-30px); /* Mayor movimiento vertical */
     }
 }
