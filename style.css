@@ -1,32 +1,38 @@
+/* Herencia de estilo en el body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Heredada por todos los elementos dentro de body */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f4f4f4; /* Heredada en el fondo de todos los elementos */
+    color: #333; /* Heredada por los textos dentro de body */
 }
 
+/* Estilos para el header */
 header {
     text-align: center;
     padding: 20px;
     background-color: #ed93c3;
-    color: rgb(22, 22, 22);
+    color: rgb(22, 22, 22); /* Este color anula la herencia del color de body */
 }
 
+/* Estilo para h1 que hereda font-family de body pero define su propio tamaño */
 h1 {
     margin: 0;
     font-size: 2.5em;
 }
 
+/* Estilo para párrafos */
 p {
     margin: 10px 0;
+    font-size: 1.1em; /* Hereda color y fuente de body */
 }
 
+/* Estilos para el menú de navegación */
 nav ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
-    background-color: #333;
+    background-color: #333; /* No hereda el fondo del body, se define específicamente */
 }
 
 nav ul li {
@@ -36,7 +42,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: white; /* Este color se sobrepone a la herencia */
     font-size: 1.2em;
 }
 
@@ -44,6 +50,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Estilos para el footer */
 footer {
     text-align: center;
     padding: 10px;
@@ -54,26 +61,27 @@ footer {
     width: 100%;
 }
 
+/* Estilo para la imagen con animación */
 .imagen-animada {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px; /* Mayor espacio superior */
+    margin-top: 50px;
 }
 
 .imagen-animada img {
-    width: 500px; /* Aumenta el ancho */
+    width: 500px;
     height: auto;
-    max-width: 90%; /* Asegura que no se desborde en pantallas pequeñas */
+    max-width: 90%;
     animation: mover 3s infinite alternate;
 }
 
-/* Animación de movimiento */
+/* Animación de movimiento vertical */
 @keyframes mover {
     0% {
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-30px); /* Mayor movimiento vertical */
+        transform: translateY(-30px);
     }
 }
