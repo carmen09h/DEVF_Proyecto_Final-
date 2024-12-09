@@ -1,71 +1,97 @@
-/* Banner fijo */
-.banner-fijo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    z-index: 1000;
+/* Herencia de estilo en el body */
+body {
+    font-family: Arial, sans-serif; /* Heredada por todos los elementos dentro de body */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Heredada en el fondo de todos los elementos */
+    color: #333; /* Heredada por los textos dentro de body */
 }
 
-/* Contenedor Relativo */
-.contenedor-relativo {
-    position: relative;
-    margin: 50px auto;
+/* Estilos para el header */
+header {
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    flex-direction: column; /* Colocamos los elementos en columna */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
     padding: 20px;
-    background-color: #ededed;
-    border: 2px dashed #ccc;
-    text-align: center;
-}
-
-.caja-relativa {
-    position: relative;
-    top: 20px;
-    left: 10px;
     background-color: #ed93c3;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
+    color: rgb(22, 22, 22); /* Este color anula la herencia del color de body */
 }
 
-/* Contenedor Absoluto */
-.contenedor-absoluto {
-    position: relative;
-    height: 200px;
-    background-color: #f4f4f4;
-    border: 2px solid #ccc;
+/* Estilo para h1 que hereda font-family de body pero define su propio tamaño */
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-align: center; /* Alinea el título al centro */
+}
+
+/* Estilo para párrafos */
+p {
+    margin: 10px 0;
+    font-size: 1.1em; /* Hereda color y fuente de body */
+    text-align: center; /* Alinea el párrafo al centro */
+}
+
+/* Estilos para el menú de navegación */
+nav ul {
+    display: flex; /* Usamos flexbox para la alineación de los ítems */
+    list-style-type: none;
+    padding: 0;
+    justify-content: center; /* Centra los elementos horizontalmente */
     text-align: center;
-    margin-bottom: 50px;
+    background-color: #333; /* No hereda el fondo del body, se define específicamente */
 }
 
-.caja-absoluta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
+nav ul li {
+    margin: 0 15px;
 }
 
-/* Sticky Element */
-.contenedor-sticky {
-    height: 500px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-    border: 2px solid #ccc;
-}
-
-.encabezado-sticky {
-    position: sticky;
-    top: 0;
-    background-color: #ed93c3;
-    color: white;
-    padding: 10px;
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Este color se sobrepone a la herencia */
     font-size: 1.2em;
 }
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el footer */
+footer {
+    display: flex; /* Usamos flexbox para alinear el texto */
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Centra el texto verticalmente */
+    text-align: center;
+    padding: 10px;
+    background-color: #eb93ed;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo para la imagen con animación */
+.imagen-animada {
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    margin-top: 50px;
+}
+
+.imagen-animada img {
+    width: 500px;
+    height: auto;
+    max-width: 90%;
+    animation: mover 3s infinite alternate;
+}
+
+/* Animación de movimiento vertical */
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
