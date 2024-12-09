@@ -3,29 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECNOLOGÍA</title>
+    <title>Position con CSS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>ÁREAS DE LA TECNOLOGÍA</h1>
-        <p>"EXPLORA CADA UNO DE LOS AVANCES Y CONCEPTOS CLAVE ENFOCADOS AL MUNDO DE LA TECNOLOGÍA"</p>
+        <h1>Posicionamiento con CSS</h1>
     </header>
+
+    <!-- Banner fijo -->
+    <div class="banner-fijo">
+        Este es un banner fijo visible siempre.
+    </div>
 
     <nav>
         <ul>
-            <li><a href="inteligencia_artificial.html">INTELIGENCIA ARTIFICIAL</a></li>
-            <li><a href="computo_nube.html">COMPUTO EN LA NUBE</a></li>
-            <li><a href="IoT.html">INTERNET DE LAS COSAS (IoT)</a></li>
+            <li><a href="#section1">Sección Relativa</a></li>
+            <li><a href="#section2">Caja Absoluta</a></li>
+            <li><a href="#section3">Elemento Sticky</a></li>
         </ul>
     </nav>
 
-    <div class="imagen-animada">
-        <img src="imagenes.png/imagen-principal.png" alt="Tecnología" />
-    </div>
+    <!-- Sección Relativa -->
+    <section id="section1" class="contenedor-relativo">
+        <h2>Sección con Elemento Relativo</h2>
+        <div class="caja-relativa">Caja posicionada relativa a su flujo normal.</div>
+    </section>
+
+    <!-- Caja Absoluta -->
+    <section id="section2" class="contenedor-absoluto">
+        <h2>Sección con Elemento Absoluto</h2>
+        <div class="caja-absoluta">Caja posicionada absolutamente.</div>
+    </section>
+
+    <!-- Sticky Element -->
+    <section id="section3" class="contenedor-sticky">
+        <h2>Sección con Sticky</h2>
+        <p>Haz scroll para ver cómo el encabezado se queda "pegado".</p>
+        <div class="encabezado-sticky">Encabezado Sticky</div>
+    </section>
 
     <footer>
-        <p>Visita mi <a href="https://github.com/carmen09h/DEVF_Proyecto_Final-" target="_blank">repositorio en GitHub</a> para más información.</p>
+        <p>Visita mi repositorio en <a href="#">GitHub</a> para más información.</p>
     </footer>
 </body>
 </html>
