@@ -1,12 +1,12 @@
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Heredada por todos los elementos dentro de body */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f4f4f4; /* Heredada en el fondo de todos los elementos */
+    color: #333; /* Heredada por los textos dentro de body */
 }
 
+/* Estilos para el header */
 header {
     display: flex;
     flex-direction: column;
@@ -14,26 +14,30 @@ header {
     align-items: center;
     padding: 20px;
     background-color: #ed93c3;
-    color: rgb(22, 22, 22);
+    color: rgb(22, 22, 22); /* Este color anula la herencia del color de body */
 }
 
+/* Estilo para h1 */
 h1 {
     margin: 0;
     font-size: 2.5em;
     text-align: center;
 }
 
+/* Estilo para párrafos */
 p {
     margin: 10px 0;
     font-size: 1.1em;
     text-align: center;
 }
 
+/* Estilos para el menú de navegación */
 nav ul {
     display: flex;
     list-style-type: none;
     padding: 0;
     justify-content: center;
+    text-align: center;
     background-color: #333;
 }
 
@@ -51,19 +55,21 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Estilos para el footer */
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 10px;
-    background-color: #3eb4ef;
-    color: rgb(68, 68, 68);
+    background-color: #eb93ed;
+    color: white;
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
+/* Estilo para la imagen con animación */
 .imagen-animada {
     display: flex;
     justify-content: center;
@@ -78,6 +84,7 @@ footer {
     animation: mover 3s infinite alternate;
 }
 
+/* Animación de movimiento vertical */
 @keyframes mover {
     0% {
         transform: translateY(0);
@@ -87,106 +94,61 @@ footer {
     }
 }
 
+/* Media Queries */
 
-.caja-absoluta {
-    position: absolute;
-    top: 20px; /* Ajusta la distancia desde la parte superior */
-    left: 20px; /* Ajusta la distancia desde el borde izquierdo */
-    background-color: #ed93c3;
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+/* Pantallas grandes (1200px o más) */
+@media (min-width: 1200px) {
+    header {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    video {
+        width: 70%;
+    }
+
+    .imagen-animada img {
+        width: 60%;
+    }
 }
 
-.caja-absoluta:hover {
-    background-color: #d473a1;
+/* Pantallas medianas (768px a 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    header {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    video {
+        width: 80%;
+    }
+
+    .imagen-animada img {
+        width: 70%;
+    }
 }
 
-/* Estilos para la ventana emergente */
-.video-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1000;
-    margin-top: 30px;
-}
+/* Pantallas pequeñas (menos de 768px) */
+@media (max-width: 767px) {
+    header {
+        padding: 20px;
+    }
 
-.video-popup.oculto {
-    display: none;
-}
+    h1 {
+        font-size: 2rem;
+    }
 
-.cerrar-video {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: rgb(244, 46, 46);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    video {
+        width: 90%;
+    }
 
-.cerrar-video:hover {
-    background-color: rgb(46, 115, 244);
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-body.inteligencia-artificial {
-    background-color: #e0f7fa;  /* Fondo azul claro */
-}
-
-.inteligencia-artificial header {
-    background-color: #00838f; /* Azul oscuro */
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.video-container {
-    margin: 20px auto;
-    text-align: center;
-}
-
-body.computo-nube {
-    background-color: #ffecb3;  /* Fondo amarillo claro */
-}
-
-.computo-nube header {
-    background-color: #ff9800; /* Naranja */
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-body.iot {
-    background-color: #c8e6c9;  /* Fondo verde claro */
-}
-
-.iot header {
-    background-color: #43a047; /* Verde oscuro */
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-video {
-    max-width: 100%;
-    border-radius: 8px;
+    .imagen-animada img {
+        width: 90%;
+    }
 }
