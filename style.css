@@ -1,45 +1,69 @@
 /* Herencia de estilo en el body */
 body {
-    font-family: Arial, sans-serif; /* Heredada por todos los elementos dentro de body */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Heredada en el fondo de todos los elementos */
-    color: #333; /* Heredada por los textos dentro de body */
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Estilos para el header */
+/* Banner fijo */
+.banner-fijo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+/* Ajustamos el margen para que no se solape el banner */
 header {
-    display: flex; /* Usamos flexbox para alinear los elementos */
-    flex-direction: column; /* Colocamos los elementos en columna */
-    justify-content: center; /* Centra los elementos verticalmente */
-    align-items: center; /* Centra los elementos horizontalmente */
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     background-color: #ed93c3;
-    color: rgb(22, 22, 22); /* Este color anula la herencia del color de body */
+    color: rgb(22, 22, 22);
 }
 
-/* Estilo para h1 que hereda font-family de body pero define su propio tamaño */
-h1 {
-    margin: 0;
-    font-size: 2.5em;
-    text-align: center; /* Alinea el título al centro */
+/* Caja con posición relativa */
+.contenedor-relativo {
+    position: relative;
+    height: 200px;
+    background-color: #ccc;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    border: 2px dashed #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Estilo para párrafos */
-p {
-    margin: 10px 0;
-    font-size: 1.1em; /* Hereda color y fuente de body */
-    text-align: center; /* Alinea el párrafo al centro */
+.caja-absoluta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ed93c3;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos para el menú de navegación */
+/* Estilo del menú de navegación */
 nav ul {
-    display: flex; /* Usamos flexbox para la alineación de los ítems */
+    display: flex;
     list-style-type: none;
     padding: 0;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    text-align: center;
-    background-color: #333; /* No hereda el fondo del body, se define específicamente */
+    justify-content: center;
+    background-color: #333;
 }
 
 nav ul li {
@@ -48,7 +72,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white; /* Este color se sobrepone a la herencia */
+    color: white;
     font-size: 1.2em;
 }
 
@@ -56,11 +80,19 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Estilos para el footer */
+/* Imagen animada */
+.imagen-animada img {
+    width: 500px;
+    height: auto;
+    max-width: 90%;
+    animation: mover 3s infinite alternate;
+}
+
+/* Footer */
 footer {
-    display: flex; /* Usamos flexbox para alinear el texto */
-    justify-content: center; /* Centra el contenido */
-    align-items: center; /* Centra el texto verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 10px;
     background-color: #eb93ed;
@@ -70,22 +102,7 @@ footer {
     width: 100%;
 }
 
-/* Estilo para la imagen con animación */
-.imagen-animada {
-    display: flex;
-    justify-content: center; /* Centra la imagen horizontalmente */
-    align-items: center; /* Centra la imagen verticalmente */
-    margin-top: 50px;
-}
-
-.imagen-animada img {
-    width: 500px;
-    height: auto;
-    max-width: 90%;
-    animation: mover 3s infinite alternate;
-}
-
-/* Animación de movimiento vertical */
+/* Animación */
 @keyframes mover {
     0% {
         transform: translateY(0);
@@ -94,4 +111,3 @@ footer {
         transform: translateY(-30px);
     }
 }
-
