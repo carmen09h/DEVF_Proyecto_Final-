@@ -1,4 +1,4 @@
-/* Herencia de estilo en el body */
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,21 +7,7 @@ body {
     color: #333;
 }
 
-/* Banner fijo */
-.banner-fijo {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 1000;
-}
-
-/* Ajustamos el margen para que no se solape el banner */
 header {
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,33 +17,18 @@ header {
     color: rgb(22, 22, 22);
 }
 
-/* Caja con posición relativa */
-.contenedor-relativo {
-    position: relative;
-    height: 200px;
-    background-color: #ccc;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 800px;
-    border: 2px dashed #999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-align: center;
 }
 
-.caja-absoluta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ed93c3;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    text-align: center;
 }
 
-/* Estilo del menú de navegación */
 nav ul {
     display: flex;
     list-style-type: none;
@@ -80,15 +51,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Imagen animada */
-.imagen-animada img {
-    width: 500px;
-    height: auto;
-    max-width: 90%;
-    animation: mover 3s infinite alternate;
-}
-
-/* Footer */
 footer {
     display: flex;
     justify-content: center;
@@ -102,7 +64,20 @@ footer {
     width: 100%;
 }
 
-/* Animación */
+.imagen-animada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.imagen-animada img {
+    width: 500px;
+    height: auto;
+    max-width: 90%;
+    animation: mover 3s infinite alternate;
+}
+
 @keyframes mover {
     0% {
         transform: translateY(0);
@@ -110,4 +85,57 @@ footer {
     100% {
         transform: translateY(-30px);
     }
+}
+
+/* Estilos para el botón con posición absoluta */
+.caja-absoluta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ed93c3;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.caja-absoluta:hover {
+    background-color: #d473a1;
+}
+
+/* Estilos para la ventana emergente */
+.video-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+}
+
+.video-popup.oculto {
+    display: none;
+}
+
+.cerrar-video {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cerrar-video:hover {
+    background-color: darkred;
 }

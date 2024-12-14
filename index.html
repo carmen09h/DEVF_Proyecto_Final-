@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Banner Fijo -->
-    <div class="banner-fijo">¡Bienvenido al mundo de la tecnología!</div>
-
     <header>
         <h1>ÁREAS DE LA TECNOLOGÍA</h1>
         <p>"EXPLORA CADA UNO DE LOS AVANCES Y CONCEPTOS CLAVE ENFOCADOS AL MUNDO DE LA TECNOLOGÍA"</p>
@@ -23,19 +20,35 @@
         </ul>
     </nav>
 
-    <!-- Caja con Position Absolute -->
-    <div class="contenedor-relativo">
-        <div class="caja-absoluta">
-            ¡Caja con posición absoluta!
-        </div>
-    </div>
-
     <div class="imagen-animada">
         <img src="imagenes.png/imagen-principal.png" alt="Tecnología" />
+    </div>
+
+    <!-- Nueva sección con botón y video -->
+    <div class="contenedor-relativo">
+        <button class="caja-absoluta" onclick="mostrarVideo()">¡Haz clic para ver el video!</button>
+        <div id="video-popup" class="video-popup oculto">
+            <video controls width="600">
+                <source src="TECNOLOGIA.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+            <button class="cerrar-video" onclick="cerrarVideo()">Cerrar</button>
+        </div>
     </div>
 
     <footer>
         <p>Visita mi <a href="https://github.com/carmen09h/DEVF_Proyecto_Final-" target="_blank">repositorio en GitHub</a> para más información.</p>
     </footer>
+
+    <script>
+        // Funciones para mostrar y cerrar el video
+        function mostrarVideo() {
+            document.getElementById("video-popup").classList.remove("oculto");
+        }
+
+        function cerrarVideo() {
+            document.getElementById("video-popup").classList.add("oculto");
+        }
+    </script>
 </body>
 </html>
