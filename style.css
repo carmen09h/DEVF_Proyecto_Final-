@@ -8,9 +8,18 @@
 /* Estilos generales para el cuerpo de la página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9; /* Cambié el color de fondo */
+    background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
+}
+
+/* Banner superior */
+.banner-fijo {
+    background-color: #3eb4ef;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.5em;
 }
 
 /* Encabezado */
@@ -20,75 +29,90 @@ header {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: #ed93c3; /* Ya está definido, se mantiene */
+    background-color: #ed93c3;
     color: rgb(22, 22, 22);
 }
 
-/* Estilo del título */
+/* Título principal */
 h1 {
     margin: 0;
     font-size: 2.5em;
     text-align: center;
 }
 
-/* Contenedor principal de la página */
-main {
+/* Párrafo en el encabezado */
+header p {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilo del menú de navegación */
+nav ul {
     display: flex;
+    list-style-type: none;
     justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-    min-height: 80vh;
+    background-color: #333;
+    padding: 10px 0;
 }
 
-/* Contenedor de contenido con un máximo ancho y un fondo blanco */
-.content-container {
-    max-width: 800px;
-    width: 100%;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+nav ul li {
+    margin: 0 15px;
 }
 
-/* Estilo de las listas */
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-/* Estilo para las imágenes */
-.content-image {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 8px;
-}
-
-/* Enlaces */
-a {
-    color: #007BFF; /* Azul */
+nav ul li a {
     text-decoration: none;
+    color: white;
+    font-size: 1.2em;
 }
 
-a:hover {
+nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Estilo para el pie de página */
-footer {
+/* Contenedor de la imagen animada */
+.imagen-animada {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 10px;
-    background-color: #3eb4ef;
-    color: rgb(68, 68, 68);
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+    margin-top: 20px;
 }
 
-/* Estilos para la ventana emergente */
+/* Estilo de la imagen */
+.imagen-animada img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Contenedor de video emergente */
+.contenedor-relativo {
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.caja-absoluta {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ed93c3;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.caja-absoluta:hover {
+    background-color: #d473a1;
+}
+
+/* Estilo para la ventana emergente del video */
 .video-popup {
     position: fixed;
     top: 50%;
@@ -96,44 +120,4 @@ footer {
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1000;
-    margin-top: 30px;
-}
-
-.video-popup.oculto {
-    display: none;
-}
-
-.cerrar-video {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: rgb(244, 46, 46);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.cerrar-video:hover {
-    background-color: rgb(46, 115, 244);
-}
-
-/* Media Query para pantallas pequeñas */
-@media (max-width: 768px) {
-    main {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .content-container {
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
 }
