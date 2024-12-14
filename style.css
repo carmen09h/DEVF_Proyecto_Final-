@@ -57,8 +57,8 @@ footer {
     align-items: center;
     text-align: center;
     padding: 10px;
-    background-color: #56bcee;
-    color: white;
+    background-color: #3eb4ef;
+    color: rgb(68, 68, 68);
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -93,7 +93,7 @@ footer {
     top: 20px; /* Ajusta la distancia desde la parte superior */
     left: 20px; /* Ajusta la distancia desde el borde izquierdo */
     background-color: #ed93c3;
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
