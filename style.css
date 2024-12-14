@@ -1,56 +1,80 @@
-
-body {
-    font-family: Arial, sans-serif;
+/* Reset general para el margen y el padding de todos los elementos */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
 }
 
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Cambié el color de fondo */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado */
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: #ed93c3;
+    background-color: #ed93c3; /* Ya está definido, se mantiene */
     color: rgb(22, 22, 22);
 }
 
+/* Estilo del título */
 h1 {
     margin: 0;
     font-size: 2.5em;
     text-align: center;
 }
 
-p {
-    margin: 10px 0;
-    font-size: 1.1em;
-    text-align: center;
-}
-
-nav ul {
+/* Contenedor principal de la página */
+main {
     display: flex;
-    list-style-type: none;
-    padding: 0;
     justify-content: center;
-    background-color: #333;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 80vh;
 }
 
-nav ul li {
-    margin: 0 15px;
+/* Contenedor de contenido con un máximo ancho y un fondo blanco */
+.content-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-nav ul li a {
+/* Estilo de las listas */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Estilo para las imágenes */
+.content-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Enlaces */
+a {
+    color: #007BFF; /* Azul */
     text-decoration: none;
-    color: white;
-    font-size: 1.2em;
 }
 
-nav ul li a:hover {
+a:hover {
     text-decoration: underline;
 }
 
+/* Estilo para el pie de página */
 footer {
     display: flex;
     justify-content: center;
@@ -60,50 +84,8 @@ footer {
     background-color: #3eb4ef;
     color: rgb(68, 68, 68);
     position: absolute;
-    bottom: 0;
     width: 100%;
-}
-
-.imagen-animada {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.imagen-animada img {
-    width: 500px;
-    height: auto;
-    max-width: 90%;
-    animation: mover 3s infinite alternate;
-}
-
-@keyframes mover {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-30px);
-    }
-}
-
-
-.caja-absoluta {
-    position: absolute;
-    top: 20px; /* Ajusta la distancia desde la parte superior */
-    left: 20px; /* Ajusta la distancia desde el borde izquierdo */
-    background-color: #ed93c3;
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.caja-absoluta:hover {
-    background-color: #d473a1;
+    bottom: 0;
 }
 
 /* Estilos para la ventana emergente */
@@ -138,4 +120,20 @@ footer {
 
 .cerrar-video:hover {
     background-color: rgb(46, 115, 244);
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .content-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
 }
