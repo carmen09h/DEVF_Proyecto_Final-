@@ -1,4 +1,4 @@
-/* Estilos generales */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -87,18 +87,17 @@ footer {
     }
 }
 
-/* Estilos para el botón con posición absoluta */
+/* Estilos para el botón en la parte superior izquierda */
 .caja-absoluta {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    left: 20px; /* Ajusta la distancia desde el borde izquierdo */
     background-color: #ed93c3;
     color: white;
-    padding: 15px 25px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 1.2em;
+    font-size: 1em;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -138,14 +137,4 @@ footer {
 
 .cerrar-video:hover {
     background-color: darkred;
-}
-.banner-fijo {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 1000;
 }
